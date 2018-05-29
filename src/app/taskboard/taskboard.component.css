@@ -1,0 +1,16 @@
+.board {
+    width: 960px;
+    margin: auto;
+}
+
+.header {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+}

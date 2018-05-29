@@ -1,0 +1,18 @@
+.input {
+    display: block;
+    border: 1px solid #E0E0E0;
+    padding: 15px;
+}
+
+.error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    border: 1px solid;
+    padding: 5px 15px;
+    font-size: 12px;
+}
+
+.input, .error {
+    border-radius: 3px;
+    width: 50%;
+}

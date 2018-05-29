@@ -1,0 +1,26 @@
+<div class="task"
+     [class.notStarted]="task.status == 'Not Started'"
+     [class.inProgress]="task.status == 'In Progress'"
+     [class.completed]="task.status == 'Completed'"
+>
+  <div class="header">
+      <div>
+        <!-- Render title here... -->
+        <h3> {{ task.title }}</h3>
+      </div>
+      <!-- Markup for dropdown menu here... -->
+    <select
+      ng-init="option[0]" (change)="updateTask(selectStatusType.value)" ngModel="{{task.status}}"
+      #selectStatusType="ngModel"
+    >
+      <option *ngFor="let statusType of statusTypes">
+        {{statusType}}
+      </option>
+    </select>
+  </div>
+  <hr>
+  <div class="body">
+      <!-- Render description here... -->
+    <p> {{ task.description}}</p>
+  </div>
+</div>

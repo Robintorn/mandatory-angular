@@ -1,0 +1,16 @@
+<!-- Add event binding for form submit... -->
+<form
+  (ngSubmit)="addTask(form.value); form.reset()"
+  #form="ngForm"
+  >
+
+  <!-- Apply ngModel to this input... -->
+  <input name="title" ngModel#title="ngModel" class="input form-control" type="text" placeholder="title" />
+  <!-- Apply ngModel to this input... -->
+  <input name="description" class="input" ngModel#description="ngModel" type="text" placeholder="description"
+  />
+  
+  <button type="submit">
+      Save
+  </button>
+</form>
