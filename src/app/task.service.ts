@@ -21,12 +21,16 @@ export class TaskService {
       .map(tasks => tasks.filter(task => task.status === status));
   }
 
+
+  // Tar in id(nummer) och status som bara får ta del av (StatusType) interfacen.
   updateTask(id: number, status: StatusType) {
     const taskIndex = this.tasks.findIndex(i => i.id === id);
     this.tasks[taskIndex].status = status;
     this.updateSubscribers();
   }
 
+  // När man pushar in en task i arrayen, så läggs title och description in.
+  // Jag ser också till att statusen för todo-cardet är NotStarted by default.
   addTask(title: string, description: string) {
     this.tasks.push({
       id: this.taskId++,

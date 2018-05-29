@@ -4,6 +4,7 @@
   <button (click)="switch=!switch">
     New Task
   </button>
+  <!-- Om event(switch) är true visas formen. Varje gång man klickar så blir det motsatt(boolean) -->
   <task-form *ngIf="switch" (taskAdded)="handleTaskAdded($event)"
   ></task-form>
 

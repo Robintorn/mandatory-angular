@@ -1,8 +1,5 @@
 <!-- Add event binding for form submit... -->
-<form
-  (ngSubmit)="addTask(form.value); form.reset()"
-  #form="ngForm"
-  >
+<form (ngSubmit)="addTask(form.value); form.reset()" #form="ngForm">
 
   <!-- Apply ngModel to this input... -->
   <input name="title" ngModel#title="ngModel" class="input form-control" type="text" placeholder="title" />

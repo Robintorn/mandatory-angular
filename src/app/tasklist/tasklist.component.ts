@@ -26,6 +26,9 @@ export class TasklistComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  // När den uppdaterar en task så ändras bara statusen.
+  // Sedan måste man också få med id:et för att kunna
+  // Lokalisera vem som är vem.
   updateTask (task) {
       this.taskService.updateTask(task.id, task.status);
   }

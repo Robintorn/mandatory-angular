@@ -15,6 +15,7 @@ export class TaskformComponent {
 
   constructor(private taskService: TaskService) {}
 
+  // Ser till så att jag får in båda ng-Modals value med title och description.
   addTask (form) {
     this.taskService.addTask(form.title, form.description);
     this.taskAdded.emit(true);
